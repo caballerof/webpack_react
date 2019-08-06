@@ -1,0 +1,9 @@
+$color-test: #ffcc55;
+$border-size: 2px;
+body {
+  div#root {
+    padding: 5px 5px;
+    width: 99%;
+    border: $border-size solid $color-test;
+  }
+}
