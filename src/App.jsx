@@ -4,9 +4,7 @@ class App extends PureComponent {
   render() {
     return (
       <div>
-        <p>
-          Hello!
-        </p>
+        <p>hola</p>
       </div>
     );
   }

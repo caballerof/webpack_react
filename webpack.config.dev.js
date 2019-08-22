@@ -7,6 +7,7 @@ exports.devConfig = ({ OUTPUT_DIR } = {}) => ({
   output: {
     filename: 'js/[name].[hash].js',
     path: OUTPUT_DIR,
+    publicPath: '/',
   },
   devServer: {
     contentBase: OUTPUT_DIR,
@@ -18,7 +19,11 @@ exports.devConfig = ({ OUTPUT_DIR } = {}) => ({
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
-      'Access-Control-Allow-Headers': 'X-Requested-With, content-type, Authorization',
+      'Access-Control-Allow-Headers': '*',
+    },
+    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:8080',
     },
   },
 });

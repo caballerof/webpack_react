@@ -7,5 +7,6 @@ exports.prodConfig = ({ OUTPUT_DIR } = {}) => ({
   output: {
     filename: 'js/[name].[contenthash].js',
     path: OUTPUT_DIR,
+    publicPath: '/',
   },
 });
